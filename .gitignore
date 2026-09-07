@@ -1,0 +1,7 @@
+node_modules
+dist
+Mockup
+*.local
+*.tsbuildinfo
+index.old.html
+.claude/skills
