@@ -24,7 +24,12 @@ export default function OrderModal({ product, onClose }: Props) {
   }, [onClose])
 
   const handleOrder = () => {
-    const msg = `¡Hola! Me interesa la playera ${product.name} en talla ${size}. ¿Está disponible?`
+    const imageUrl = `${window.location.origin}${product.image}`
+    const msg = `¡Hola! Me interesa esta playera:\n\n` +
+      `🛒 *${product.name}*\n` +
+      `📏 Talla: *${size}*\n\n` +
+      `${imageUrl}\n\n` +
+      `¿Está disponible?`
     window.open(
       `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`,
       '_blank',
