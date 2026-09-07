@@ -3,7 +3,9 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "vite",
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/p/:id", "destination": "/p/:id.html" },
+    { "source": "/:path((?!mockups|assets|favicon|p/).*)", "destination": "/index.html" }
   ]
 }
